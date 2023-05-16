@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --received-backgroundcolor:#f1f1f1;
+    --delivered-backgroundcolor:#cbecbc;
+    --customer-backgroundcolor:#c9e3ea;
+    --netearning-backgroundcolor:#e8cdcd;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+}
+
+.column {
+    float: left;
+    width:25%;
+    padding: 0 1%;
+}
+.row {
+    /* margin: 0 -5px; */
+    width:100%;
+    display: block;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.order-received-box {
+        box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 16px;
+        text-align: center;
+        background-color: var(--received-backgroundcolor);
+
+}
+
+.order-delivered-box {
+        box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 16px;
+        text-align: center;
+        background-color: var(--delivered-backgroundcolor);
+    
+}
+
+.new-customer-box {
+        box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 16px;
+        text-align: center;
+        background-color: var( --customer-backgroundcolor);
+}
+
+.net-earning-box {
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 16px;
+    text-align: center;
+    background-color: var( --netearning-backgroundcolor);
+ 
+}
+
+.column-line{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.cus-pay{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.chart{
+    margin-left: 100px;
+}
+
+.report{
+    margin-top:100px;
+    margin-left: 300px;
+}

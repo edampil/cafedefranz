@@ -1,0 +1,229 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+:root {
+    --colorYellow: #fadc32;
+    --colorBackground: #fcfde6;
+    --colorGreen: #3ace67ee;
+    --fontFamily: "Montserrat", sans-serif;
+    /* Alert message color variables */
+    --infoMsgFont: #059;
+    --InfoMsgBg: #bef;
+    --successMsgFont: #270;
+    --successMsgBg: #dff2bf;
+    --warningMsgFont: #9f6000;
+    --warningMsgBg: #feefb3;
+    --dangerMsgFont: #d8000c;
+    --dangerMsgBg: #ffbaba;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: calc(100vw - 40px);
+    position: relative;
+    margin-bottom: 35px;
+    z-index: 50;
+}
+
+.alert-info {
+    color: var(--infoMsgFont);
+    background-color: var(--InfoMsgBg);
+}
+
+.alert-success {
+    color: var(--successMsgFont);
+    background-color: var(--successMsgBg);
+}
+
+.alert-warning {
+    color: var(--warningMsgFont);
+    background-color: var(--warningMsgBg);
+}
+
+.alert-danger {
+    color: var(--dangerMsgFont);
+    background-color: var(--dangerMsgBg);
+}
+
+
+/* Progress Bar */
+
+.progress {
+    position: relative;
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: #acece6;
+    border-radius: 2px;
+    background-clip: padding-box;
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+}
+
+.progress .indeterminate {
+    background-color: #26a69a;
+}
+
+.progress .indeterminate:before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.progress .indeterminate:after {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s;
+}
+
+@-webkit-keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@-webkit-keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+
+@keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+
+.dashboard-error {
+    font-size: 13px;
+    color: #ee2828;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+/* Tooltip styling */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* BreadCrumb */
+
+ul.breadcrumb {
+    padding: 3vh 70px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: #000;
+    content: "/";
+}
+
+ul.breadcrumb li a {
+    color: #1943a7;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    transition-delay: 50ms;
+    transition: 50ms;
+    color: #5b81d8;
+}

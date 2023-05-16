@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --background-color:#fcfde6;
+    --post-btn-color:#4eca06;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.page-container{
+  position: relative;
+  min-height: 100vh;
+}
+.content-wrapper{
+  padding-bottom: 180px; /* height of the footer */
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-weight: 500;
+  }
+  
+  input[type=submit] {
+    background-color:var(--post-btn-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--post-btn-color);
+  }
+  
+  .feedback-content {
+    border-radius: 5px;
+    background-color: var(--background-color);
+    padding: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+    
+  }
+
+  @media screen and (max-width: 800px) {
+    .feedback-content{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    }
